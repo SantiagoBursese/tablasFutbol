@@ -1,0 +1,21 @@
+<h1 class="display-4">Posiciones</h1>
+<table class="table table-striped">
+    <tr>
+      <th scope="col">Pos</th>
+      <th scope="col">Equipo</th>
+      <th scope="col">PTS</th>
+      <th scope="col">PJ</th>
+      <th scope="col">PG</th>
+      <th scope="col">PE</th>
+      <th scope="col">PP</th>
+    </tr>
+    <tr class = "pointer" *ngFor= "let equipo of equipos; let indice= index" (click)="detalleEquipo(equipo, pais)">
+      <td>{{indice +1}}</td>
+      <td>{{equipo.nombre}}</td>
+      <td>{{equipo.pts}}</td>
+      <td>{{equipo.pj}}</td>
+      <td>{{equipo.pg}}</td>
+      <td>{{equipo.pe}}</td>
+      <td>{{equipo.pp}}</td>
+    </tr>
+</table>
